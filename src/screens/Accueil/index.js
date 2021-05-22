@@ -96,6 +96,9 @@ class AccueilScreen extends Component {
       goToPharmacieScreen = () => {
         this.props.navigation.navigate('PharmacieScreen');
       };
+      goToContactScreen = () => {
+        this.props.navigation.navigate('ContactScreen');
+      };
     render () {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#D8D8D8'}}>
@@ -167,10 +170,12 @@ class AccueilScreen extends Component {
                         keyExtractor={(item) => item.key}
                         data={this.state.foodStores}
                         renderItem={({item, index}) => (
+                          <TouchableHighlight underlayColor= 'transparent' onPress={() => this.goToContactScreen()}>
                             <CategoryItems
                             name={item.name}
                             image={item.image}
                             />
+                            </TouchableHighlight>
                         )}
                         />
                     </View>

@@ -9,6 +9,7 @@ import ValidationCompteScreen from '../screens/ValidationCompte'
 import AccueilScreen from '../screens/Accueil'
 import RendezVousScreen from '../screens/RendezVous'
 import PharmacieScreen from '../screens/Pharmacie'
+import ContactScreen from '../screens/Contact'
 
 
 const Stack = createStackNavigator()
@@ -62,6 +63,13 @@ const Router = (props) => {
                 <Stack.Screen
                     name={'PharmacieScreen'}
                     component={PharmacieScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name={'ContactScreen'}
+                    component={ContactScreen}
                     options={{
                         headerShown: false,
                     }}
