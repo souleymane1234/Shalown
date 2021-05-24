@@ -1,104 +1,31 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react';
 import {
     View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, ImageBackground
 } from 'react-native'
 import styles from './style'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Textarea from 'react-native-textarea';
+import DatePicker from 'react-native-datepicker';
 
-class ContactScreen extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          rendezVousStores: [
-            {
-                date: 'Mardi 09 Avril',
-                placeDispo: '3 plages horraires disponible',
-                heureOuverture: '08:00',
-                pause: '12:00',
-                heureFermeture: '15:00',
-                key: '1',
-            },
-            {
-                date: 'Mardi 09 Avril',
-                placeDispo: '3 plages horraires disponible',
-                heureOuverture: '08:00',
-                pause: '12:00',
-                heureFermeture: '15:00',
-                key: '2',
-              },
-          ],
-          MedecinsStores: [
-            {
-                image: require('../../assets/ID.jpg'),
-                name: 'Dr: Christina FRAZIER',
-                specialité: 'Médecin Généraliste',
-                key: '1',
-            },
-            {
-                image: require('../../assets/ID.jpg'),
-                name: 'Dr: Christina FRAZIER',
-                specialité: 'Pédiatre',
-                key: '2',
-              },
-              {
-                image: require('../../assets/ID.jpg'),
-                name: 'Dr: Christina FRAZIER',
-                specialité: 'Pédiatre',
-                key: '3',
-              },
-              {
-                image: require('../../assets/ID.jpg'),
-                name: 'Dr: Christina FRAZIER',
-                specialité: 'Pédiatre',
-                key: '4',
-              },
-              {
-                image: require('../../assets/ID.jpg'),
-                name: 'Dr: Christina FRAZIER',
-                specialité: 'Pédiatre',
-                key: '5',
-              },
-          ],
-          CommentaireStores: [
-            {
-                commentaire: 'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
-                name: 'jean Kouadio',
-                date: 'il y\'a 1 semaine',
-                key: '1',
-            },
-            {
-                commentaire: 'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
-                name: 'jean Kouadio',
-                date: 'il y\'a 1 semaine',
-                key: '2',
-              },
-              {
-                commentaire: 'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
-                name: 'jean Kouadio',
-                date: 'il y\'a 1 semaine',
-                key: '3',
-              },
-          ],
-        };
-      }
-    render () {
+const ContactScreen = () => {
+    const [date, setDate] = useState('09-10-2020');
+
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.header}>
-                    <TouchableOpacity style={{}} onPress={() => this.props.navigation.goBack()}>
-                        <Icon
-                        style={{ color: '#3ABDB7'}}
-                        size={30}
-                        name="arrow-left-circle-outline"
-                        pack="material"
-                        />
-                    </TouchableOpacity>
-                    <Image source={require('../../assets/1.png')} style={{top: -20}}/>
-                    <View style={{flexDirection: 'row'}}>
-                    <Icon name='bell' size={30}  color="#3ABDB7"/>
-                    <Icon name='account-circle' size={30}  color="#602873" pack="material"/>
-                    </View>
+                        <TouchableOpacity style={{}} onPress={() => this.props.navigation.goBack()}>
+                            <Icon
+                            style={{ color: '#3ABDB7'}}
+                            size={30}
+                            name="arrow-left-circle-outline"
+                            pack="material"
+                            />
+                        </TouchableOpacity>
+                        <Image source={require('../../assets/1.png')} style={{top: -20}}/>
+                        <View style={{flexDirection: 'row'}}>
+                        <Icon name='bell' size={30}  color="#3ABDB7"/>
+                        <Icon name='account-circle' size={30}  color="#602873" pack="material"/>
+                        </View>
                     
 
                 </View>
@@ -112,8 +39,6 @@ class ContactScreen extends Component {
                             <Textarea
                                 containerStyle={styles.textareaContainer}
                                 style={styles.textarea}
-                                onChangeText={this.onChange}
-                                defaultValue={this.state.text}
                                 placeholder={'Laisser un commentaire'}
                                 placeholderTextColor={'#c7c7c7'}
                                 underlineColorAndroid={'transparent'}
@@ -131,10 +56,135 @@ class ContactScreen extends Component {
                                 </TouchableOpacity>
                         </View>
                     </View>
+                    <View style={styles.container}>
+        <Text style={styles.title}>
+          Date et heures
+        </Text>
+        <DatePicker
+          style={styles.datePickerStyle}
+          date={date} // Initial date from state
+          mode="date" // The enum of date, datetime and time
+          placeholder="select date"
+          format="DD-MM-YYYY"
+          minDate="01-01-2016"
+          maxDate="01-01-2030"
+          confirmBtnText="Confirm"
+          cancelBtnText="Cancel"
+          customStyles={{
+            dateIcon: {
+              //display: 'none',
+              position: 'absolute',
+              left: 0,
+              top: 4,
+              marginLeft: 0,
+            },
+            dateInput: {
+              marginLeft: 36,
+            },
+          }}
+          onDateChange={(date) => {
+            setDate(date);
+          }}
+        />
+      </View>
+      <View
+            style={{
+                height: 'auto',
+                marginHorizontal: 10,
+                marginVertical: 5,
+                backgroundColor: '#fff',
+                borderRadius: 10,
+                elevation: 5,
+                padding: 9,
+                margin: 10
+              }}
+      >
+          <View style={{flexDirection: 'row', justifyContent: 'space-around', marginBottom: 15}}>
+              <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>08:00</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>08:30</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>09:00</Text>
+              </View>
+          </View>
+          {/* ligne 2 */}
+          <View style={{flexDirection: 'row', justifyContent: 'space-around', marginBottom: 15}}>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>09:30</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>10:00</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>10:30</Text>
+              </View>   
+          </View>
+          {/* ligne 3 */}
+          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>11:00</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>11:30</Text>
+              </View>
+              <View style={{width: 60,  borderRadius: 10, height: 30}}>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>15:00</Text>
+              </View>
+          </View>
+      </View>
+      <View style={{}}>
+          <View>
+            <TouchableOpacity
+                style={styles.customBtnBGConnecter}
+                onPress={() => console.log('ok')}
+            >
+                <Text style={styles.customBtnTextConnecter}>Maintenant</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{flexDirection: 'row', width: '100%'}}>
+          <TouchableOpacity
+                style={styles.customBtnBGDisable}
+                onPress={() => console.log('ok')}
+            >
+                <Text style={styles.customBtnTextConnecter}>En presentiel</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.customBtnBGDisable}
+                onPress={() => console.log('ok')}
+            >
+                <Text style={styles.customBtnTextConnecter}>En ligne</Text>
+            </TouchableOpacity>
+
+          </View>
+      </View>
+      <Text style={{margin: 20, color: '#3ABDB7', fontSize: 16}}>Ajouter des pièces jointes</Text>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', margin: 20, borderBottomWidth: 1, borderBottomColor: '#3ABDB7'}}>
+          <Text>Télécharger des images</Text>
+          <TouchableOpacity>
+            <Icon style={{}} name="image"pack="material"size={25}/>
+            </TouchableOpacity>
+      </View>
+      <View style={{ width: '100%'}}>
+          <TouchableOpacity
+                style={styles.customBtnBGRendezVous}
+                onPress={() => console.log('ok')}
+            >
+                <Text style={styles.customBtnTextConnecter}>Demander un rendez-vous</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.customBtnBGAnnuler}
+                onPress={() => console.log('ok')}
+            >
+                <Text style={styles.customBtnTextConnecter}>Annuler</Text>
+            </TouchableOpacity>
+
+          </View>
                 </ScrollView>
             </SafeAreaView>
         )
     }
-}
 
 export default ContactScreen

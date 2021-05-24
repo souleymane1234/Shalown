@@ -5,7 +5,7 @@ export default StyleSheet.create({
     // Footer
     header:{
         backgroundColor: '#fff',
-        height: 40,
+        height: 60,
         flexDirection: 'row',
         justifyContent: 'space-between',
         margin: 10
@@ -31,7 +31,8 @@ export default StyleSheet.create({
       footerContentCentered: 
       {
           justifyContent: 'center', 
-          alignItems: 'center'
+          alignItems: 'center',
+          height: 50
       },
       footerVoiceContainer: {
         // elevation: 3,
@@ -44,5 +45,58 @@ export default StyleSheet.create({
         marginVertical: 60,
         top: -20
     },
+    title: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      padding: 20,
+    },
+    datePickerStyle: {
+      width: 200,
+      marginTop: 20,
+    },
+    customBtnTextConnecter: {
+      fontSize: 20,
+      fontWeight: "400",
+      color: "#fff",
+      textAlign:'center',
+      marginTop:5
+      },
+      customBtnBGConnecter: {
+        backgroundColor: "#3ABDB7",
+        paddingHorizontal: 20,
+        paddingVertical: 5,
+        borderRadius: 5,
+        margin:10,
+        height:53,
+        },
+        customBtnBGDisable: {
+          backgroundColor: "#D8D8D8",
+          paddingHorizontal: 20,
+          paddingVertical: 5,
+          borderRadius: 5,
+          margin:10,
+          height:53,
+          width: '44%'
+          },
+          customBtnBGRendezVous: {
+            backgroundColor: "#3ABDB7",
+            paddingHorizontal: 20,
+            paddingVertical: 5,
+            borderRadius: 5,
+            margin:10,
+            height:53,
+            width: '80%',
+            alignSelf: 'center'
+            },
+            customBtnBGAnnuler: {
+              backgroundColor: "red",
+              paddingHorizontal: 20,
+              paddingVertical: 5,
+              borderRadius: 5,
+              margin:10,
+              height:53,
+              width: '80%',
+              alignSelf: 'center'
+              },
   
 }); 
