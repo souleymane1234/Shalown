@@ -99,6 +99,9 @@ class AccueilScreen extends Component {
       goToContactScreen = () => {
         this.props.navigation.navigate('ContactScreen');
       };
+      goToProfileScreen = () => {
+        this.props.navigation.navigate('ProfileScreen');
+      };
     render () {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#D8D8D8'}}>
@@ -106,7 +109,10 @@ class AccueilScreen extends Component {
                 <Image source={require('../../assets/1.png')} style={{top: -20}}/>
                 <View style={{flexDirection: 'row'}}>
                 <Icon name='bell' size={30}  color="#3ABDB7"/>
-                <Icon name='account-circle' size={30}  color="#602873" pack="material"/>
+                <TouchableHighlight underlayColor= 'transparent' onPress={() => this.goToProfileScreen()}>
+                  <Icon name='account-circle' size={30}  color="#602873" pack="material"/>
+                </TouchableHighlight>
+                
                 </View>
 
 

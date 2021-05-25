@@ -10,6 +10,7 @@ import AccueilScreen from '../screens/Accueil'
 import RendezVousScreen from '../screens/RendezVous'
 import PharmacieScreen from '../screens/Pharmacie'
 import ContactScreen from '../screens/Contact'
+import ProfileScreen from '../screens/Profile'
 
 
 const Stack = createStackNavigator()
@@ -70,6 +71,13 @@ const Router = (props) => {
                 <Stack.Screen
                     name={'ContactScreen'}
                     component={ContactScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                 <Stack.Screen
+                    name={'ProfileScreen'}
+                    component={ProfileScreen}
                     options={{
                         headerShown: false,
                     }}

@@ -8,7 +8,7 @@ import Textarea from 'react-native-textarea';
 import DatePicker from 'react-native-datepicker';
 import { Modal, Portal,  Button, Provider, Switch  } from 'react-native-paper';
 
-const ContactScreen = () => {
+const ContactScreen = ({navigation}) => {
     const [date, setDate] = useState('09-10-2020');
     const [visible, setVisible] = React.useState(false);
 
@@ -22,7 +22,7 @@ const ContactScreen = () => {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.header}>
-                        <TouchableOpacity style={{}} onPress={() => this.props.navigation.goBack()}>
+                        <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
                             <Icon
                             style={{ color: '#3ABDB7'}}
                             size={30}
