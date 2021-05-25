@@ -102,6 +102,12 @@ class AccueilScreen extends Component {
       goToProfileScreen = () => {
         this.props.navigation.navigate('ProfileScreen');
       };
+      goToListMedicamentScreen = () => {
+        this.props.navigation.navigate('ListMedicamentScreen');
+      };
+      goToListMedecinScreen = () => {
+        this.props.navigation.navigate('ListMedecinScreen');
+      };
     render () {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#D8D8D8'}}>
@@ -167,7 +173,22 @@ class AccueilScreen extends Component {
 
                     </View>
                     <View>
-                        <RowTitle title={'Catégories'} />
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+                          <RowTitle title={'Catégories'} />
+                          <TouchableOpacity onPress={() => console.log('console')}>
+                            <View
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                marginHorizontal: 20,
+                                top: 10
+                              }}>
+                              <Text style={{color: '#000', fontSize: 12}}>Voir plus</Text>
+
+                            </View>
+                        </TouchableOpacity>
+                        </View>
+                        
                         
                         
                         <FlatList
@@ -186,7 +207,21 @@ class AccueilScreen extends Component {
                         />
                     </View>
 
-                         <RowTitle title={'Pharmacies'} />
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+                          <RowTitle title={'Pharmacies'} />
+                          <TouchableOpacity onPress={() => this.goToListMedicamentScreen()}>
+                            <View
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                marginHorizontal: 20,
+                                top: 10
+                              }}>
+                              <Text style={{color: '#000', fontSize: 12}}>Voir plus</Text>
+
+                            </View>
+                        </TouchableOpacity>
+                        </View>
                 
                 
                         <FlatList
@@ -208,7 +243,21 @@ class AccueilScreen extends Component {
                         />
                         {/* hopital store */}
 
-                        <RowTitle title={'Hopitaux'} />
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+                          <RowTitle title={'Hopitaux'} />
+                          <TouchableOpacity onPress={() => this.goToListMedecinScreen()}>
+                            <View
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                marginHorizontal: 20,
+                                top: 10
+                              }}>
+                              <Text style={{color: '#000', fontSize: 12}}>Voir plus</Text>
+
+                            </View>
+                        </TouchableOpacity>
+                        </View>
                         
                         
                         <FlatList

@@ -11,6 +11,8 @@ import RendezVousScreen from '../screens/RendezVous'
 import PharmacieScreen from '../screens/Pharmacie'
 import ContactScreen from '../screens/Contact'
 import ProfileScreen from '../screens/Profile'
+import ListMedicamentScreen from '../screens/ListMedicament'
+import ListMedecinScreen from '../screens/ListMedecin'
 
 
 const Stack = createStackNavigator()
@@ -78,6 +80,20 @@ const Router = (props) => {
                  <Stack.Screen
                     name={'ProfileScreen'}
                     component={ProfileScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name={'ListMedicamentScreen'}
+                    component={ListMedicamentScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name={'ListMedecinScreen'}
+                    component={ListMedecinScreen}
                     options={{
                         headerShown: false,
                     }}

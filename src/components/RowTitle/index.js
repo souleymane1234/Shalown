@@ -15,16 +15,7 @@ const RowTitle = ({title}) => {
       <Text style={{fontSize: 16, fontWeight: 'bold', color: '#3ABDB7'}}>
         {title}
       </Text>
-      <TouchableOpacity>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <Text style={{color: '#000', fontSize: 12}}>Voir plus</Text>
 
-        </View>
-      </TouchableOpacity>
     </View>
   );
 };
