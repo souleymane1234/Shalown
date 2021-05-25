@@ -114,14 +114,6 @@ class ListMedecinScreen extends Component {
                         <View style={{flexDirection: 'row'}}>
                             <TouchableOpacity>
                             <Icon
-                                style={{}}
-                                name="image"
-                                pack="material"
-                                size={40}
-                            />
-                            </TouchableOpacity>
-                            <TouchableOpacity>
-                            <Icon
                                 style={{backgroundColor: '#602873', height: 45}}
                                 name="microphone"
                                 pack="material"
@@ -138,7 +130,6 @@ class ListMedecinScreen extends Component {
                         keyExtractor={(item) => item.key}
                         data={this.state.pharmacieStores}
                         renderItem={({item, index}) => (
-                            <TouchableHighlight underlayColor= 'transparent' onPress={() => this.goToPharmacieScreen()}>
                             <ListMedecinItems
                             name={item.name}
                             image={item.image}
@@ -146,7 +137,6 @@ class ListMedecinScreen extends Component {
                             hopital={item.hopital}
                             dispo={item.dispo}
                             />
-                            </TouchableHighlight>
                         )}
                         />
   
