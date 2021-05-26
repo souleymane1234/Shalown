@@ -108,6 +108,9 @@ class AccueilScreen extends Component {
       goToListMedecinScreen = () => {
         this.props.navigation.navigate('ListMedecinScreen');
       };
+      goToHistoriqueScreen = () => {
+        this.props.navigation.navigate('HistoriqueScreen');
+      };
     render () {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#D8D8D8'}}>
@@ -175,7 +178,7 @@ class AccueilScreen extends Component {
                     <View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                           <RowTitle title={'Catégories'} />
-                          <TouchableOpacity onPress={() => console.log('console')}>
+                          <TouchableOpacity  onPress={() => this.goToHistoriqueScreen()}>
                             <View
                               style={{
                                 flexDirection: 'row',
