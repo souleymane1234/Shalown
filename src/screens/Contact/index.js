@@ -110,13 +110,13 @@ const ContactScreen = ({navigation}) => {
       >
           <View style={{flexDirection: 'row', justifyContent: 'space-around', marginBottom: 15}}>
               <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
-                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>08:00</Text>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5, color: '#fff'}}>08:00</Text>
               </View>
               <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
-                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>08:30</Text>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5, color: '#fff'}}>08:30</Text>
               </View>
               <View style={{width: 60,  borderRadius: 10, backgroundColor: 'red', height: 30}}>
-                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5}}>09:00</Text>
+                  <Text style={{alignItems: 'center', alignSelf: 'center', top: 5, color: '#fff'}}>09:00</Text>
               </View>
           </View>
           {/* ligne 2 */}

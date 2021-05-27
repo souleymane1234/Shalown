@@ -20,18 +20,18 @@ class ValidationCompteScreen extends Component {
                 <View style={{ flex: 2, margin: 20 }}>
                     <Text style={{fontSize: 28}}>Verifiez votre Email</Text>
                     <Text style={{marginBottom: 20}}>Nous vous avons envoyé le code a 4 chiffres</Text>
-                        <Text>Entrez le code</Text>
-                        <View style={{backgroundColor: 'white', width: '70%', alignSelf: 'center'}}>
+                    <Text>Entrez le code</Text>
+                    <View style={{backgroundColor: 'white', width: '70%', alignSelf: 'center'}}>
                         <CodeValidator/>
                         <Text style={{textAlign:'center', top: 25}}>00:50</Text>
                         <TouchableOpacity
-                        style={styles.customBtnBG}
-                        onPress={() => this.goToAccueilScreen()}
-                    >
-                        <Text style={styles.customBtnBGText}>Continuer</Text>
+                            style={styles.customBtnBG}
+                            onPress={() => this.goToAccueilScreen()}
+                        >   
+                            <Text style={styles.customBtnBGText}>Continuer</Text>
 
-                    </TouchableOpacity>
-                        </View>
+                        </TouchableOpacity>
+                    </View>
 
                     
 

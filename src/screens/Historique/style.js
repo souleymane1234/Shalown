@@ -29,17 +29,19 @@ export default StyleSheet.create({
         marginBottom: 1
     },
     customBtnBG: {
-        backgroundColor: '#3ABDB7',
+        backgroundColor: '#fff',
         paddingHorizontal: 30,
         paddingVertical: 5,
-        borderRadius: 5,
+        borderRadius: 10,
         margin: 10,
-        height: 53
+        height: 53,
+        borderWidth: 1,
+        borderColor: '#3ABDB7'
     },
     customBtnBGText: {
         fontSize: 20,
         fontWeight: '400',
-        color: '#fff',
+        color: '#3ABDB7',
         textAlign: 'center',
         marginTop: 5
     }

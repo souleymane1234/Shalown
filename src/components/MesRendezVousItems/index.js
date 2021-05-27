@@ -1,7 +1,6 @@
 import {ImageBackground, TouchableOpacity, View, Image, Text} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Start from '../Stars'
 
 const MesRendezVousItems = ({heure, name, image, spécialité, date, status}) => {
   return (
@@ -55,5 +54,7 @@ const MesRendezVousItems = ({heure, name, image, spécialité, date, status}) =>
     </View>
   );
 };
+
+
 
 export default MesRendezVousItems;
