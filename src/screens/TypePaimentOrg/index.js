@@ -9,13 +9,13 @@ import {
   ScrollView,
   FlatList,
   ImageBackground,
-  Picker
+  Picker,
 } from 'react-native';
 import styles from './style';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Input } from 'react-native-elements';
-import Paiment from '../../assets/svg/Paiment'
-import PickerNumber from '../../components/PickerNumber'
+import {Input} from 'react-native-elements';
+import Paiment from '../../assets/svg/Paiment';
+import PickerNumber from '../../components/PickerNumber';
 class TypePaimentOrgScreen extends Component {
   render() {
     return (
@@ -41,41 +41,63 @@ class TypePaimentOrgScreen extends Component {
           </View>
         </View>
         <View style={{margin: 10}}>
-            <Text style={{fontSize: 22, fontWeight: 'bold', margin: 10}}>
-                Choisissez une méthde de payement
-            </Text>
+          <Text style={{fontSize: 22, fontWeight: 'bold', margin: 10}}>
+            Choisissez une méthde de payement
+          </Text>
         </View>
         <View style={{}}>
-        <ScrollView horizontal={true} style={{}}>
-            <View style={{margin: 10, flexDirection: 'row', }}>
-            <Image source={require('../../assets/orange.jpg')} style={{height: 50, width: 100, borderRadius: 10 }} />
-            <Image source={require('../../assets/mtn.jpg')} style={{height: 50, width: 100,  marginHorizontal: 10, borderRadius: 10 }} />
-            <Image source={require('../../assets/moov.png')} style={{height: 50, width: 100, borderRadius: 10 }} />
-            <Image source={require('../../assets/visa.png')} style={{height: 50, width: 100, borderRadius: 10, marginHorizontal: 10 }} />
-            <Image source={require('../../assets/mcard.png')} style={{height: 50, width: 100, borderRadius: 10 }} />
+          <ScrollView horizontal={true} style={{}}>
+            <View style={{margin: 10, flexDirection: 'row'}}>
+              <Image
+                source={require('../../assets/orange.jpg')}
+                style={{height: 50, width: 100, borderRadius: 10}}
+              />
+              <Image
+                source={require('../../assets/mtn.jpg')}
+                style={{
+                  height: 50,
+                  width: 100,
+                  marginHorizontal: 10,
+                  borderRadius: 10,
+                }}
+              />
+              <Image
+                source={require('../../assets/moov.png')}
+                style={{height: 50, width: 100, borderRadius: 10}}
+              />
+              <Image
+                source={require('../../assets/visa.png')}
+                style={{
+                  height: 50,
+                  width: 100,
+                  borderRadius: 10,
+                  marginHorizontal: 10,
+                }}
+              />
+              <Image
+                source={require('../../assets/mcard.png')}
+                style={{height: 50, width: 100, borderRadius: 10}}
+              />
             </View>
-
-        </ScrollView>
+          </ScrollView>
         </View>
-        <Paiment style={{alignSelf: 'center'}}/>
+        <Paiment style={{alignSelf: 'center'}} />
         <View style={{flexDirection: 'row'}}>
-            <PickerNumber/>
-            <Input
-  placeholder='EX: 0701020304'
-  containerStyle={{
-      top: 10,
-      
-  }}
-/>
-
+          <PickerNumber />
+          <Input
+            placeholder="EX: 0701020304"
+            containerStyle={{
+              top: 10,
+            }}
+          />
         </View>
         <View style={{width: '84%', alignSelf: 'center'}}>
-            <TouchableOpacity
-              style={styles.customBtnBG}
-              onPress={() => console.log('pressed')}>
-              <Text style={styles.customBtnBGText}>Payer</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={styles.customBtnBG}
+            onPress={() => console.log('pressed')}>
+            <Text style={styles.customBtnBGText}>Payer</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     );
   }
