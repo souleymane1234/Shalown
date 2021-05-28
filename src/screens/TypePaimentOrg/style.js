@@ -52,48 +52,20 @@ export default StyleSheet.create({
     width: 200,
     marginTop: 20,
   },
-  customBtnTextConnecter: {
+  customBtnBG: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 30,
+    paddingVertical: 5,
+    borderRadius: 10,
+    margin: 10,
+    height: 53,
+    backgroundColor: '#3ABDB7'
+},
+customBtnBGText: {
     fontSize: 20,
-    fontWeight: '400',
+    fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
-    marginTop: 5,
-  },
-  customBtnBGConnecter: {
-    backgroundColor: '#3ABDB7',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 5,
-    margin: 10,
-    height: 53,
-  },
-  customBtnBGDisable: {
-    backgroundColor: '#D8D8D8',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 5,
-    margin: 10,
-    height: 53,
-    width: '44%',
-  },
-  customBtnBGRendezVous: {
-    backgroundColor: '#3ABDB7',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 5,
-    margin: 10,
-    height: 53,
-    width: '80%',
-    alignSelf: 'center',
-  },
-  customBtnBGAnnuler: {
-    backgroundColor: 'red',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 5,
-    margin: 10,
-    height: 53,
-    width: '80%',
-    alignSelf: 'center',
-  },
+    marginTop: 5
+}
 });
