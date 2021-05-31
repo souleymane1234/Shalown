@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {
-    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, TouchableHighlight
+    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, TouchableHighlight, LogBox
 } from 'react-native'
 import styles from './style'
 import SvgLogin from '../../assets/svg/SvgLogin'
@@ -14,6 +14,9 @@ import BottomBar from '../BottomBar'
 import ListMedicamentsItems from '../../components/ListMedicamentItems'
 
 class ListMedicamentScreen extends Component {
+  componentDidMount() {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+}
     constructor(props) {
         super(props);
         this.state = {

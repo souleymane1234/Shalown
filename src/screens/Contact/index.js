@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import {
-    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, ImageBackground
+    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, ImageBackground, LogBox
+    
 } from 'react-native'
 import styles from './style'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -18,6 +19,10 @@ const ContactScreen = ({navigation}) => {
     const [isSwitchOn, setIsSwitchOn] = React.useState(false);
 
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
+
+    useEffect(() => {
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+    }, [])
 
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>

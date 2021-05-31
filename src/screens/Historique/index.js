@@ -8,6 +8,7 @@ import {
   TextInput,
   FlatList,
   ScrollView,
+  LogBox,
 } from 'react-native';
 import styles from './style';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
@@ -19,6 +20,9 @@ import {Modal, Portal, Button, Provider, Switch} from 'react-native-paper';
 import RadioButtonRN from 'radio-buttons-react-native';
 
 class FeedScreen extends Component {
+  componentDidMount() {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -143,6 +147,9 @@ class NotificationsScreen extends Component {
   goToTypePaimentOrg = () => {
     this.props.navigation.navigate('TypePaimentOrgScreen');
   };
+  goToListMedicamentScreen = () => {
+    this.props.navigation.navigate('ListMedicamentScreen');
+  };
 
   render() {
     return (
@@ -167,7 +174,7 @@ class NotificationsScreen extends Component {
           <View style={{width: '84%', alignSelf: 'center'}}>
             <TouchableOpacity
               style={styles.customBtnBG}
-              onPress={() => console.log('pressed')}>
+              onPress={() => this.goToListMedicamentScreen()}>
               <Text style={styles.customBtnBGText}>Poursuivre mes achats</Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -221,12 +228,12 @@ class NotificationsScreen extends Component {
                   }}>
                   Je paie:
                 </Text>
-                  <RadioButtonRN
-                    data={this.state.DataPaie}
-                    selectedBtn={() =>this.goToTypePaimentOrg()}
-                    box={false}
-                    activeColor="#000"
-                  />
+                <RadioButtonRN
+                  data={this.state.DataPaie}
+                  selectedBtn={() => this.goToTypePaimentOrg()}
+                  box={false}
+                  activeColor="#000"
+                />
               </View>
             </Modal>
           </Portal>

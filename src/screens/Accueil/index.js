@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {
-    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, TouchableHighlight
+    View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollView, FlatList, TouchableHighlight, LogBox
 } from 'react-native'
 import SvgLogin from '../../assets/svg/SvgLogin'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -12,6 +12,9 @@ import HopitalItems from '../../components/HopitalItems'
 import BottomBar from '../BottomBar'
 
 class AccueilScreen extends Component {
+  componentDidMount() {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+}
     constructor(props) {
         super(props);
         this.state = {
@@ -178,7 +181,7 @@ class AccueilScreen extends Component {
                     <View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                           <RowTitle title={'Catégories'} />
-                          <TouchableOpacity  onPress={() => this.goToHistoriqueScreen()}>
+                          <TouchableOpacity  onPress={() => this.goToListMedecinScreen()}>
                             <View
                               style={{
                                 flexDirection: 'row',
@@ -212,10 +215,10 @@ class AccueilScreen extends Component {
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                           <RowTitle title={'Pharmacies'} />
-                          <TouchableOpacity onPress={() => this.goToListMedicamentScreen()}>
+                          <TouchableOpacity onPress={() => this.goToPharmacieScreen()}>
                             <View
                               style={{
-                                flexDirection: 'row',
+                                flexDirection: 'row',  
                                 alignItems: 'center',
                                 marginHorizontal: 20,
                                 top: 10
@@ -233,7 +236,6 @@ class AccueilScreen extends Component {
                         keyExtractor={(item) => item.key}
                         data={this.state.pharmacieStores}
                         renderItem={({item, index}) => (
-                            <TouchableHighlight underlayColor= 'transparent' onPress={() => this.goToPharmacieScreen()}>
                             <PharmacieItems
                             name={item.name}
                             image={item.image}
@@ -241,14 +243,13 @@ class AccueilScreen extends Component {
                             adress={item.adress}
                             dispo={item.dispo}
                             />
-                            </TouchableHighlight>
                         )}
                         />
                         {/* hopital store */}
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                           <RowTitle title={'Hopitaux'} />
-                          <TouchableOpacity onPress={() => this.goToListMedecinScreen()}>
+                          <TouchableOpacity onPress={() => this.goToRendezVousScreen()}>
                             <View
                               style={{
                                 flexDirection: 'row',
@@ -270,7 +271,6 @@ class AccueilScreen extends Component {
                         keyExtractor={(item) => item.key}
                         data={this.state.HopitalStores}
                         renderItem={({item, index}) => (
-                            <TouchableHighlight underlayColor= 'transparent' onPress={() => this.goToRendezVousScreen()}>
                             <HopitalItems
                             name={item.name}
                             image={item.image}
@@ -278,7 +278,6 @@ class AccueilScreen extends Component {
                             adress={item.adress}
                             dispo={item.dispo}
                             />
-                            </TouchableHighlight>
                         )}
                         />
   
@@ -288,7 +287,7 @@ class AccueilScreen extends Component {
                     
 
                 </View>
-                <BottomBar/>
+                <BottomBar navigation={this.props.navigation}/>
                 
                 
             </SafeAreaView>
