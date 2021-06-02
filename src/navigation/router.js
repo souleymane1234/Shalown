@@ -15,6 +15,7 @@ import ListMedicamentScreen from '../screens/ListMedicament';
 import ListMedecinScreen from '../screens/ListMedecin';
 import HistoriqueScreen from '../screens/Historique';
 import TypePaimentOrgScreen from '../screens/TypePaimentOrg';
+import SlidesScreen from '../screens/Slides';
 
 const Stack = createStackNavigator();
 
@@ -109,6 +110,13 @@ const Router = props => {
         <Stack.Screen
           name={'TypePaimentOrgScreen'}
           component={TypePaimentOrgScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'SlidesScreen'}
+          component={SlidesScreen}
           options={{
             headerShown: false,
           }}

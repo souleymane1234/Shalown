@@ -10,14 +10,16 @@ import {
 import styles from './style';
 import SvgConfimationScreen from '../../assets/svg/SvgConfimationScreen';
 import CodeValidator from '../../components/CodeValidator';
+import {ScrollView} from 'react-native-gesture-handler';
 
 class ValidationCompteScreen extends Component {
-  goToAccueilScreen = () => {
-    this.props.navigation.navigate('AccueilScreen');
+
+  goToSlidesScreen = () => {
+    this.props.navigation.navigate('SlidesScreen');
   };
   render() {
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+      <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
         <View style={{flex: 3}}>
           <SvgConfimationScreen style={{alignSelf: 'center', top: 20}} />
         </View>
@@ -33,23 +35,33 @@ class ValidationCompteScreen extends Component {
               width: '70%',
               alignSelf: 'center',
             }}>
-            <CodeValidator />
-            <Text style={{textAlign: 'center', top: 25}}>00:50</Text>
+            <CodeValidator style={{}}/>
+            <Text style={{textAlign: 'center', color: 'red'}}>00:50</Text>
             <TouchableOpacity
               style={styles.customBtnBG}
-              onPress={() => this.goToAccueilScreen()}>
+              onPress={() => this.goToSlidesScreen()}>
               <Text style={styles.customBtnBGText}>Continuer</Text>
             </TouchableOpacity>
           </View>
         </View>
         <View
-          style={{flex: 1, flexDirection: 'row', alignSelf: 'center', top: 40}}>
-          <Text style={{fontWeight: 'bold'}}>
-            Vous n'avez pas recu le code ?
-          </Text>
-          <Text style={{fontWeight: 'bold', color: '#3ABDB7'}}> Renvoyer</Text>
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            alignSelf: 'center',
+            height: 100,
+          }}>
+          <View style={{top: 50, flexDirection: 'row'}}>
+            <Text style={{fontWeight: 'bold'}}>
+              Vous n'avez pas recu le code ?
+            </Text>
+            <Text style={{fontWeight: 'bold', color: '#3ABDB7'}}>
+              {' '}
+              Renvoyer
+            </Text>
+          </View>
         </View>
-      </SafeAreaView>
+      </ScrollView>
     );
   }
 }
