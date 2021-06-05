@@ -66,7 +66,7 @@ class AccueilScreen extends Component {
       ],
       pharmacieStores: [
         {
-          image: require('../../assets/pharmacie.jpg'),
+          image: {uri: 'https://www.lesfurets.com/mutuelle-sante/guide/wp-content/uploads/sites/9/2016/08/differences-pharmacie-parapharmacie-750x500.jpg'},
           name: 'Pharmacie Las palmas',
           location: 'Carrefour Las palmas',
           adress: "Boulevard de l'université, Abidjan",
@@ -74,7 +74,7 @@ class AccueilScreen extends Component {
           key: '1',
         },
         {
-          image: require('../../assets/pharmacie.jpg'),
+          image: {uri: 'https://www.lesfurets.com/mutuelle-sante/guide/wp-content/uploads/sites/9/2016/08/differences-pharmacie-parapharmacie-750x500.jpg'},
           name: 'Pharmacie Las palmas',
           location: 'Carrefour Las palmas',
           adress: "Boulevard de l'université, Abidjan",
@@ -84,7 +84,7 @@ class AccueilScreen extends Component {
       ],
       HopitalStores: [
         {
-          image: require('../../assets/hopital.jpg'),
+          image: {uri: 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/2/3/6234e4558d_50147938_hygiene-hopital.jpg'},
           name: 'CHU de Cocody',
           location: 'Cocody',
           adress: "Boulevard de l'université, Abidjan",
@@ -92,7 +92,7 @@ class AccueilScreen extends Component {
           key: '1',
         },
         {
-          image: require('../../assets/hopital.jpg'),
+          image: {uri: 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/2/3/6234e4558d_50147938_hygiene-hopital.jpg'},
           name: 'CHU de Cocodys',
           location: 'Cocody',
           adress: "Boulevard de l'université, Abidjan",

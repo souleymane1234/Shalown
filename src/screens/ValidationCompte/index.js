@@ -11,6 +11,7 @@ import styles from './style';
 import SvgConfimationScreen from '../../assets/svg/SvgConfimationScreen';
 import CodeValidator from '../../components/CodeValidator';
 import {ScrollView} from 'react-native-gesture-handler';
+import CountDown from 'react-native-countdown-component';
 
 class ValidationCompteScreen extends Component {
 
@@ -36,7 +37,15 @@ class ValidationCompteScreen extends Component {
               alignSelf: 'center',
             }}>
             <CodeValidator style={{}}/>
-            <Text style={{textAlign: 'center', color: 'red'}}>00:50</Text>
+            <CountDown
+        until={60 * 1 + 0}
+        size={30}
+        onFinish={() => alert('Délai expiré')}
+        digitStyle={{backgroundColor: '#FFF'}}
+        digitTxtStyle={{color: 'red'}}
+        timeToShow={['M', 'S']}
+        timeLabels={{}}
+      />
             <TouchableOpacity
               style={styles.customBtnBG}
               onPress={() => this.goToSlidesScreen()}>

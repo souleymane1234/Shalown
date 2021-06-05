@@ -28,6 +28,7 @@
     "react-native-app-intro-slider": "^4.0.4",
     "react-native-calendario": "^2.1.1",
     "react-native-confirmation-code-field": "^7.1.0",
+    "react-native-countdown-component": "^2.7.1",
     "react-native-datepicker": "^1.7.2",
     "react-native-elements": "^3.4.1",
     "react-native-gesture-handler": "^1.10.3",
