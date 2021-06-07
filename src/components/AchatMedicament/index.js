@@ -1,5 +1,6 @@
-import {ImageBackground, TouchableOpacity, View, Image, Text, Picker} from 'react-native';
+import {ImageBackground, TouchableOpacity, View, Image, Text} from 'react-native';
 import React, { useState } from "react";
+import {Picker} from '@react-native-picker/picker';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Start from '../Stars'
 

@@ -96,13 +96,16 @@ class PharmacieScreen extends Component {
   goToListMedicamentScreen = () => {
     this.props.navigation.navigate('ListMedicamentScreen');
   };
+  goBack = () => {
+    this.props.navigation.goBack();
+  };
   render() {
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
         <View style={styles.header}>
           <TouchableOpacity
             style={{}}
-            onPress={() => this.props.navigation.goBack()}>
+            onPress={() => this.goBack()}>
             <Icon
               style={{color: '#3ABDB7'}}
               size={30}

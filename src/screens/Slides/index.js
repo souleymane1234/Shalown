@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, StatusBar} from 'react-native';
+import {View, Text, Image, StyleSheet, StatusBar, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import SvgLogin from '../../assets/svg/SvgLogin'
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   button: {
     width: 40,
     height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
+    backgroundColor: '#fff',
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

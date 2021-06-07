@@ -69,11 +69,14 @@ class ListMedecinScreen extends Component {
       goToProfileScreen = () => {
         this.props.navigation.navigate('ProfileScreen');
       };
+      goBack = () => {
+        this.props.navigation.goBack();
+      };
     render () {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.header}>
-                        <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
+                        <TouchableOpacity style={{}} onPress={() => this.goBack()}>
                             <Icon
                             style={{ color: '#3ABDB7'}}
                             size={30}

@@ -33,10 +33,12 @@ class LoginScreen extends Component {
                     <TextInput
                         style={styles.textInput_form}
                         placeholder='Email/Numéro de telephone'
+                        placeholderTextColor="#3ABDB7"
                     />
                     <TextInput
                         style={styles.textInput_form}
                         placeholder='Mot de passe' secureTextEntry
+                        placeholderTextColor="#3ABDB7"
                     />
                     <View>
                         <TouchableOpacity onPress={() => console.log('ok')}>

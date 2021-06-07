@@ -28,6 +28,7 @@ export default StyleSheet.create({
     margin: 10,
     height: 53,
     top: 20,
+    marginBottom: 40
   },
   customBtnBGText: {
     fontSize: 20,

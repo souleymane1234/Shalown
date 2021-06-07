@@ -15,11 +15,17 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import BottomBar from '../BottomBar';
 
 class ProfileScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+  goBack = () => {
+    this.props.navigation.goBack();
+  };
   render() {
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: '#D8D8D8'}}>
         <View style={styles.header}>
-          <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={{}} onPress={() => this.goBack()}>
             <Icon
               style={{color: '#3ABDB7'}}
               size={30}
@@ -27,7 +33,12 @@ class ProfileScreen extends Component {
               pack="material"
             />
           </TouchableOpacity>
-          <Image source={{uri: 'https://pvtistes.net/forum/attachments/comment-obtenir-son-pvt-canada-351/21739d1393069621-photos-didentite-demande-de-permis-eic-pvt-jp-etc-photo-identite.jpg'}} />
+          <Image
+            source={{
+              uri:
+                'https://pvtistes.net/forum/attachments/comment-obtenir-son-pvt-canada-351/21739d1393069621-photos-didentite-demande-de-permis-eic-pvt-jp-etc-photo-identite.jpg',
+            }}
+          />
           <View style={{flexDirection: 'row'}}>
             <Icon name="bell" size={30} color="#3ABDB7" />
             <Icon
@@ -79,25 +90,37 @@ class ProfileScreen extends Component {
                 </Text>
               </TouchableHighlight>
             </View>
-            <View style={{marginBottom: 180}}>
+            <View style={{marginBottom: 80}}>
               <TextInput
                 style={styles.textInput_form}
                 placeholder="Nom d'utilisateur"
+                value="Kenania KOBENAN"
               />
-              <TextInput style={styles.textInput_form} placeholder="Email" />
+              <TextInput
+                style={styles.textInput_form}
+                placeholder="Email"
+                value="kobenankenania@gmail.com"
+              />
               <TextInput
                 style={styles.textInput_form}
                 placeholder="Confirmation de Email"
+                value="kobenankenania@gmail.com"
               />
-              <TextInput style={styles.textInput_form} placeholder="Adresse" />
+              <TextInput
+                style={styles.textInput_form}
+                placeholder="Adresse"
+                value="Cocody-Abidjan, COte d'ivoire"
+              />
               <TextInput
                 style={styles.textInput_form}
                 placeholder="Mot de passe"
+                value="12345678"
                 secureTextEntry
               />
               <TextInput
                 style={styles.textInput_form}
                 placeholder="Confirmez mot de passe"
+                value="12345678"
                 secureTextEntry
               />
               <View>
@@ -110,7 +133,6 @@ class ProfileScreen extends Component {
             </View>
           </ScrollView>
         </View>
-        <BottomBar navigation={this.props.navigation} />
       </SafeAreaView>
     );
   }

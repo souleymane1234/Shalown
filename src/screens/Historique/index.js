@@ -19,7 +19,7 @@ import AchatMedicamentItems from '../../components/AchatMedicament';
 import {Modal, Portal, Button, Provider, Switch} from 'react-native-paper';
 import RadioButtonRN from 'radio-buttons-react-native';
 
-class FeedScreen extends Component {
+class MesrendezVousScreen extends Component {
   componentDidMount() {
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
@@ -72,7 +72,7 @@ class FeedScreen extends Component {
   }
 }
 
-class NotificationsScreen extends Component {
+class Achats extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -246,11 +246,17 @@ const Tab = createMaterialTopTabNavigator();
 const containerStyle = {backgroundColor: 'white', padding: 20};
 
 class HistoriqueScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+  goBack = () => {
+    this.props.navigation.goBack();
+  };
   render() {
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
         <View style={styles.header}>
-          <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={{}} onPress={() => this.goBack()}>
             <Icon
               style={{color: '#3ABDB7'}}
               size={30}
@@ -289,8 +295,8 @@ class HistoriqueScreen extends Component {
             labelStyle: {fontSize: 12},
             style: {backgroundColor: '#3ABDB7', color: '#fff'},
           }}>
-          <Tab.Screen name="Mes rendez-vous" component={FeedScreen} />
-          <Tab.Screen name="Mes achats" component={NotificationsScreen} />
+          <Tab.Screen name="Mes rendez-vous" component={MesrendezVousScreen} />
+          <Tab.Screen name="Mes achats" component={Achats} />
         </Tab.Navigator>
       </SafeAreaView>
     );
