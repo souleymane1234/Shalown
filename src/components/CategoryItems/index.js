@@ -12,11 +12,12 @@ const CategoryItems = ({name, image}) => {
         borderRadius: 20,
         elevation: 5,
         padding: 9,
-        margin: 10
+        margin: 10,
+        width: 90
       }}>
           <View>
-              <Image source={image} style={{width: 80, height: 80,}}/>
-              <Text style={{textAlign: 'center'}}>{name}</Text>
+              <Image source={image} style={{width: 60, height: 60, alignSelf: 'center'}}/>
+              <Text style={{textAlign: 'center', fontSize: 11, fontWeight: 'bold'}}>{name}</Text>
           </View>
     </View>
   );

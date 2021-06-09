@@ -11,7 +11,7 @@ export default StyleSheet.create({
         height: 60,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        margin: 10
+        margin: 10,
     },
     textInput_form: {
         paddingHorizontal: 30,

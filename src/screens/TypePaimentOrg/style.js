@@ -59,13 +59,13 @@ export default StyleSheet.create({
     borderRadius: 10,
     margin: 10,
     height: 53,
-    backgroundColor: '#3ABDB7'
-},
-customBtnBGText: {
+    backgroundColor: '#3ABDB7',
+  },
+  customBtnBGText: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
-    marginTop: 5
-}
+    marginTop: 5,
+  },
 });

@@ -70,22 +70,22 @@ class PharmacieScreen extends Component {
       CommentaireStores: [
         {
           commentaire:
-            'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
+            'L\' accueil est génial et les pharmaciens s\' occupent bien des clients',
           name: 'jean Kouadio',
-          date: "il y'a 1 semaine",
+          date: "il y'a 2 jours",
           key: '1',
         },
         {
           commentaire:
-            'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
-          name: 'jean Kouadio',
-          date: "il y'a 1 semaine",
+            'Très belle pharmacie bien décoré et accueillant',
+          name: 'Marie Yao',
+          date: "il y'a 5 jours",
           key: '2',
         },
         {
           commentaire:
-            'jfkjfkflfk fkfkfjfkfk ffkfkfjfjf fkfkffkf ffjfkfkfnf fkfkfkfkffkf fifjfirorle ffjflfifjdof fkfnfijff',
-          name: 'jean Kouadio',
+            'Ils sont biens mais n\' ont pas tous les produits',
+          name: 'Ester Koné',
           date: "il y'a 1 semaine",
           key: '3',
         },
@@ -127,7 +127,7 @@ class PharmacieScreen extends Component {
         <ScrollView>
           <View>
             <Image
-              source={require('../../assets/hopital.jpg')}
+              source={require('../../assets/pharma1.jpg')}
               style={styles.imageBack}></Image>
           </View>
           <View

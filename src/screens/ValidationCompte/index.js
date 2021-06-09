@@ -40,7 +40,7 @@ class ValidationCompteScreen extends Component {
             <CountDown
         until={60 * 1 + 0}
         size={30}
-        onFinish={() => alert('Délai expiré')}
+        onFinish={() => console.log('Délai expiré')}
         digitStyle={{backgroundColor: '#FFF'}}
         digitTxtStyle={{color: 'red'}}
         timeToShow={['M', 'S']}

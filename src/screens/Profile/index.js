@@ -34,10 +34,8 @@ class ProfileScreen extends Component {
             />
           </TouchableOpacity>
           <Image
-            source={{
-              uri:
-                'https://pvtistes.net/forum/attachments/comment-obtenir-son-pvt-canada-351/21739d1393069621-photos-didentite-demande-de-permis-eic-pvt-jp-etc-photo-identite.jpg',
-            }}
+            source={require('../../assets/1.png')}
+            style={{top: -20}}
           />
           <View style={{flexDirection: 'row'}}>
             <Icon name="bell" size={30} color="#3ABDB7" />
@@ -68,7 +66,7 @@ class ProfileScreen extends Component {
             </View>
             <View style={{alignSelf: 'center'}}>
               <Image
-                source={require('../../assets/ID.jpg')}
+                source={require('../../assets/profile.jpg')}
                 style={{width: 100, height: 100, borderRadius: 50}}
               />
               <Text

@@ -23,37 +23,44 @@ class ListMedecinScreen extends Component {
         this.state = {
           pharmacieStores: [
             {
-                image: {uri: 'https://pvtistes.net/forum/attachments/comment-obtenir-son-pvt-canada-351/21739d1393069621-photos-didentite-demande-de-permis-eic-pvt-jp-etc-photo-identite.jpg'},
-                name: 'Dr. Frank Dupain',
-                spécialité: 'Généraliste',
+                image: require('../../assets/coul.jpg'),
+                name: 'Dr. Myriam Coulibaly',
+                spécialité: 'Orthopédiste',
                 hopital: 'CHU de Angre',
                 dispo: 'Disponible 24h/24',
+                image2: require('../../assets/anais.jpg'),
+                name2: 'Dr. Marie Kobenan',
+                spécialité2: 'Gynécologue',
+                hopital2: 'CHU de Angre',
+                dispo2: 'Disponible 24h/24',
                 key: '1',
             },
             {
-                image: {uri: 'https://st2.depositphotos.com/1046535/8196/i/600/depositphotos_81960286-stock-photo-portrait-of-young-female-doctor.jpg'},
-                name: 'Dr. Christina Frazer',
-                spécialité: 'Gynécologue',
+                image: require('../../assets/koffi.jpg'),
+                name: 'Dr. Siméon Koffi',
+                spécialité: 'Pédiatre',
                 hopital: 'CHU de Angre',
                 dispo: 'Disponible 24h/24',
+                image2: require('../../assets/kote.jpg'),
+                name2: 'Dr. Fanta Koté',
+                spécialité2: 'Médécin Généraliste',
+                hopital2: 'CHU de Angre',
+                dispo2: 'Disponible 24h/24',
                 key: '2',
               },
               {
-                image: {uri: 'https://pvtistes.net/forum/attachments/comment-obtenir-son-pvt-canada-351/21739d1393069621-photos-didentite-demande-de-permis-eic-pvt-jp-etc-photo-identite.jpg'},
-                name: 'Dr. Frank Dupain',
-                spécialité: 'Généraliste',
+                image: require('../../assets/aka.jpg'),
+                name: 'Dr. Dr. Fakhral ANLIMOUDINE',
+                spécialité: 'Dentiste',
                 hopital: 'CHU de Angre',
                 dispo: 'Disponible 24h/24',
+                image2: require('../../assets/facral.jpg'),
+                name2: 'Dr. Flacel AKA',
+                spécialité2: 'Gynécologue',
+                hopital2: 'CHU de Angre',
+                dispo2: 'Disponible 24h/24',
                 key: '3',
             },
-            {
-              image: {uri: 'https://st2.depositphotos.com/1046535/8196/i/600/depositphotos_81960286-stock-photo-portrait-of-young-female-doctor.jpg'},
-              name: 'Dr. Christina Frazer',
-                spécialité: 'Généraliste',
-                hopital: 'CHU de Angre',
-                dispo: 'Disponible 24h/24',
-                key: '4',
-              },
           ],
         };
       }
@@ -126,6 +133,11 @@ class ListMedecinScreen extends Component {
                             spécialité={item.spécialité}
                             hopital={item.hopital}
                             dispo={item.dispo}
+                            name2={item.name2}
+                            image2={item.image2}
+                            spécialité2={item.spécialité2}
+                            hopital2={item.hopital2}
+                            dispo2={item.dispo2}
                             />
                         )}
                         />

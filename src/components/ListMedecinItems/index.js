@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Start from '../Stars'
 
-const ListMedecinItems = ({image, name, spécialité, hopital, dispo}) => {
+const ListMedecinItems = ({image, name, spécialité, hopital, dispo, image2, name2, spécialité2, hopital2, dispo2}) => {
   return (
     <View style={{ flexDirection: 'row', width: '100%' }}>
             <View style={{height: 'auto', marginHorizontal: 10,marginVertical: 5, backgroundColor: '#fff', borderRadius: 10,elevation: 5, padding: 9,  margin: 10, width: '45%'}}>
@@ -43,18 +43,18 @@ const ListMedecinItems = ({image, name, spécialité, hopital, dispo}) => {
           {/* deux */}
             <View style={{ height: 'auto',marginHorizontal: 10, marginVertical: 5, backgroundColor: '#fff',borderRadius: 10,elevation: 5, padding: 9, margin: 10, width: '45%' }}>
                 <View>
-                    <Image source={image} style={{width: 150, height: 150, borderRadius: 10, alignSelf: 'center'}}/>
+                    <Image source={image2} style={{width: 150, height: 150, borderRadius: 10, alignSelf: 'center'}}/>
                 </View>
                 <View style={{  flexDirection: 'row', justifyContent: 'space-between'}}>
-                    <Text style={{}} style={{ fontSize: 14, fontWeight: 'bold'}}>{name}</Text>
+                    <Text style={{}} style={{ fontSize: 14, fontWeight: 'bold'}}>{name2}</Text>
                     <Icon name='checkbox-marked-circle' size={20} color="#36CF30"   pack= 'material'/>
                 </View>
                 <View style={{ justifyContent: 'space-between'}}>
                     <View style={{}}>
-                        <Text style={{ color: '#000', marginBottom: 2}}>{spécialité}</Text>
+                        <Text style={{ color: '#000', marginBottom: 2}}>{spécialité2}</Text>
                         <View style={{flexDirection: 'row', marginBottom: 5}}>
                             <Icon name='checkbox-marked-circle' size={12} color="#3ABDB7"   pack= 'material'/>
-                            <Text style={{ color: '#3ABDB7', fontSize: 10, marginHorizontal: 5}}>{hopital}</Text>
+                            <Text style={{ color: '#3ABDB7', fontSize: 10, marginHorizontal: 5}}>{hopital2}</Text>
                         </View>
                     </View>
                     <View style={{flexDirection: 'row', marginBottom: 5}}>
@@ -64,7 +64,7 @@ const ListMedecinItems = ({image, name, spécialité, hopital, dispo}) => {
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                         <View style={{flexDirection: 'row'}}>
                             <Icon name='clock-time-five' size={18} color="#3ABDB7"   pack= 'material'/>
-                            <Text style={{fontSize: 8, alignSelf: 'center', color: '#3ABDB7', marginHorizontal: 5}}>{dispo}</Text>
+                            <Text style={{fontSize: 8, alignSelf: 'center', color: '#3ABDB7', marginHorizontal: 5}}>{dispo2}</Text>
                         </View>
                         <View style={{flexDirection: 'row'}}>
                             <Icon name='phone-hangup' size={18} color="red"   pack= 'material'/>
