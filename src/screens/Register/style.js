@@ -19,6 +19,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#3ABDB7',
     marginBottom: 1,
+    color: '#000'
   },
   customBtnBG: {
     backgroundColor: '#3ABDB7',

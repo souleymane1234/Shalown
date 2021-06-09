@@ -12,6 +12,12 @@ import styles from './style';
 import SvgLogin from '../../assets/svg/SvgLogin';
 
 class RegisterScreen extends Component {
+  goToValidationCompteScreen = () => {
+    this.props.navigation.navigate('ValidationCompteScreen');
+  };
+  goToLoginScreen = () => {
+    this.props.navigation.navigate('LoginScreen');
+  };
   render() {
     return (
       <View style={{flex: 1, backgroundColor: '#fff'}}>
@@ -82,13 +88,11 @@ class RegisterScreen extends Component {
             </View>
           </ScrollView>
           <View style={{flexDirection: 'row', alignSelf: 'center'}}>
-            <Text style={{fontWeight: 'bold'}}>
-              Vous n'avez pas de compte ?
-            </Text>
-            <TouchableOpacity onPress={() => this.goToRegisterScreen()}>
+            <Text style={{fontWeight: 'bold'}}>Vous avez déjà un compte ?</Text>
+            <TouchableOpacity onPress={() => this.goToLoginScreen()}>
               <Text style={{fontWeight: 'bold', color: '#3ABDB7'}}>
                 {' '}
-                Inscrivez-vous
+                Connectez-vous
               </Text>
             </TouchableOpacity>
           </View>

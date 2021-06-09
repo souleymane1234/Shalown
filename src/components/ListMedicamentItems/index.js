@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Start from '../Stars'
 
-const ListMedicamentsItems = ({image, name, prix}) => {
+const ListMedicamentsItems = ({image, name, prix, image2, name2, prix2}) => {
   return (
     <View
       style={{
@@ -51,14 +51,14 @@ const ListMedicamentsItems = ({image, name, prix}) => {
         width: 150,
       }}>
               <View>
-              <Image source={image} style={{width: 100, height: 100, alignSelf: 'center'}}/>
+              <Image source={image2} style={{width: 100, height: 100, alignSelf: 'center'}}/>
               </View>
               <View style={{ alignSelf: 'center'}}>
-                <Text style={{}} style={{ fontSize: 18}}>{name}</Text> 
+                <Text style={{}} style={{ fontSize: 18}}>{name2}</Text> 
               </View>
               <View style={{flexDirection: 'row', margin: 10, justifyContent: 'space-between'}}>
                   <View style={{}}>
-                      <Text style={{alignSelf: 'center', color: '#3ABDB7'}}>{prix}</Text>
+                      <Text style={{alignSelf: 'center', color: '#3ABDB7'}}>{prix2}</Text>
                   </View>
                   <View style={{marginHorizontal: 20}}>
                   <Icon name='cart' size={20} color="#3ABDB7"   pack= 'material'/>

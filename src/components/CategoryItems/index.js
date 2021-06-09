@@ -17,7 +17,7 @@ const CategoryItems = ({name, image}) => {
       }}>
           <View>
               <Image source={image} style={{width: 60, height: 60, alignSelf: 'center'}}/>
-              <Text style={{textAlign: 'center', fontSize: 11, fontWeight: 'bold'}}>{name}</Text>
+              <Text style={{textAlign: 'center', fontSize: 9, fontWeight: 'bold'}}>{name}</Text>
           </View>
     </View>
   );
