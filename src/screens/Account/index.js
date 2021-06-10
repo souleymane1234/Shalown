@@ -3,9 +3,28 @@ import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import styles from './style';
 import Google from '../../assets/svg/Google';
 import Facebook from '../../assets/svg/Facebook';
+import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class AccountScreen extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isVisible: true,
+    };
+  }
+
+  Hide_Splash_Screen = () => {
+    this.setState({
+      isVisible: false,
+    });
+  };
+  componentDidMount() {
+    var that = this;
+    setTimeout(function () {
+      that.Hide_Splash_Screen();
+    }, 5000);
+  }
   goToLoginScreen = () => {
     this.props.navigation.navigate('LoginScreen');
   };
@@ -13,6 +32,24 @@ class AccountScreen extends Component {
     this.props.navigation.navigate('RegisterScreen');
   };
   render() {
+    const { count } = this.state;
+    let Splash_Screen = (
+      <View style={styles.SplashScreen_RootView}>
+          
+        <Animatable.View animation="zoomIn"style={styles.Logo}>
+          <Image
+          animation="zoomIn"
+            source={require('../../assets/1.png')}
+            style={{ justifyContent: 'center', alignSelf: 'center' }}
+            
+          />
+        </Animatable.View>
+        
+      </View>
+    );
+    if (this.state.isVisible === true ? Splash_Screen : null) {
+      return <View style={styles.MainContainer}>{Splash_Screen}</View>;
+    } else {
     return (
       <SafeAreaView style={styles.container}>
         <View style={{alignSelf: 'center', top: 20}}>
@@ -52,6 +89,7 @@ class AccountScreen extends Component {
         </View>
       </SafeAreaView>
     );
+  }
   }
 }
 

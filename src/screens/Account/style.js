@@ -57,6 +57,28 @@ export default StyleSheet.create({
         textConnexion: {
             textAlign: 'center',
             fontSize: 16
-        }
+        },
+        MainContainer: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingTop: Platform.OS === 'ios' ? 0 : 0,
+          },
+          Logo: {
+            flexDirection: 'row',
+          
+            alignItems: 'center'
+          },
+           TextLogo: {
+            fontSize: 28,
+          },
+          SplashScreen_RootView: {
+            justifyContent: 'center',
+            flex: 1,
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            alignItems: 'center',
+          },
 
 });
