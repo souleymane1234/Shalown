@@ -39,7 +39,7 @@ class AccountScreen extends Component {
         <Animatable.View animation="zoomIn"style={styles.Logo}>
           <Image
           animation="zoomIn"
-            source={require('../../assets/1.png')}
+            source={require('../../assets/Groupe.png')}
             style={{ justifyContent: 'center', alignSelf: 'center' }}
             
           />
